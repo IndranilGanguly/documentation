@@ -68,7 +68,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [QSA,L]
 ```
 
-Place this **.htaccess** file in project folder and then paste the contents of the project folder in  /var/www/html folder
+Place this **.htaccess** file in project folder and then paste all the contents of the project folder in  /var/www/html folder
 
 ### Step 2
 
@@ -78,7 +78,7 @@ Restart apache service
 sudo service apache2 restart
 ```
 
-If while refreshing page it shows 404 error follow these extra steps
+If while refreshing page, shows 404 error follow these extra steps
 
 ### Step 1
 
@@ -132,9 +132,16 @@ sudo service apache2 restart
 
 
 
-## 3. GoDaddy SSL Certificate
+## 3. GoDaddy SSL Certificate Configs
 
 Steps to get .jks file for tomcat from a GoDaddy SSL certificate
+
+From Godaddy SSL, we get three files
+
+1. certfile.crt
+2. keyfile.key
+3. cert_bundle.crt
+
 
 
 ### Step 1
@@ -142,11 +149,10 @@ Steps to get .jks file for tomcat from a GoDaddy SSL certificate
 Run the following command
 
 ```bash
-openssl pkcs12 -export -in /etc/apache2/ssl/9bd0e395feb19d80.crt 
--inkey /etc/apache2/ssl/agor_ssl.key -out /opt/tomcat/ssl/agor_ssl.p12 
--name tomcat -CAfile /etc/apache2/ssl/gd_bundle-g2-g1.crt 
+openssl pkcs12 -export -in /dirname/certfile.crt 
+-inkey /dirofkeyfile/keyfile.key -out /destdir/filename.p12 
+-name 'aliasname' -CAfile /dirname/cert_bundle.crt 
 
-(Password: 'password')
 ```
 
 ### Step 2
@@ -155,13 +161,13 @@ Use the generated .p12 file to generate .jks file using java keytool
 
 ```bash
 keytool -importkeystore 
--deststorepass changeit 
+-deststorepass "password" 
 -destkeypass "password" 
--destkeystore /opt/tomcat/ssl/agor.jks 
--srckeystore /opt/tomcat/ssl/agor_ssl.p12 
+-destkeystore /destdir/filename.jks 
+-srckeystore /srcdir/filename.p12 
 -srcstoretype PKCS12 
 -srcstorepass "password" 
--alias "tomcat"
+-alias "aliasname"
 ```
 
 Edit the server.xml file in tomcat as required
@@ -171,12 +177,12 @@ Edit the server.xml file in tomcat as required
                maxThreads="150" SSLEnabled="true">
         <UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" />
         <SSLHostConfig>
-                <Certificate certificateKeystoreFile="/opt/tomcat/ssl/agor.jks"
+                <Certificate certificateKeystoreFile="/dirname/filename.jks"
                         keystorePass="password"
                         clientAuth="false" 
                         sslProtocol="TLS"
-                        keyAlias="tomcat"
-                        type="RSA" />
+                        keyAlias="aliasname"
+                        type="RSA"/>
         </SSLHostConfig>
     </Connector>
 ```

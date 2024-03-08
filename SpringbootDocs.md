@@ -1,4 +1,4 @@
-# SERVER RELATED DOCS
+# SPRINGBOOT DOCS
 
 
 ## 1. Spring Mysql Configuration
@@ -21,10 +21,10 @@ spring.jpa.show-sql=true
 If file operations are involved, use this configurations in **application.properties** file in springboot
 
 ```properties
-imagepathroot=C:\\cwdb\\img\\
-#imagepathroot=/usr/btcrepo/img/   ## for linux
-proofpathroot=C:\\cwdb\\proof\\
-#proofpathroot=/usr/btcrepo/img/   ## for linux
+var_name1=C:\\folder1\\       ## for windows
+#var_name2=/dir1/dir2/dir3/   ## for linux
+var_name3=C:\\folder1\\       ## for windows
+#var_name4=/dir1/dir3/dir4/   ## for linux
 ```
 
 
@@ -45,7 +45,7 @@ If app crash occurs while generating excel reports while using ooxml library
 Remove the JAR **poi-ooxml-schemas-4.1.2.jar** from the following directory after deployment
 
 ```bash
-├── training
+├── project (ex: if war deployed is project.war)
 │   ├── WEB-INF
 │   │   ├──lib
 |   |   |   ├──poi-ooxml-schemas-4.1.2.jar

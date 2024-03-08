@@ -14,10 +14,8 @@ Go to "Server Configuration" and then Click on "Tweak Settings"
 
 ![server config image](<assets/Screenshot (90).png>)
 
-
 Then set "Restrict outgoing SMTP to root,exim and mailman" to "Off"
 ![smtp option image](<assets/Screenshot (91).png>)
-
 
 #### Config 2
 
@@ -32,8 +30,6 @@ Disable the option
 #### Note
 
 If you have done the "Config 1" first then no need to do "Config 2" as it will be automatically disabled.
-
-
 
 ### Step 2
 

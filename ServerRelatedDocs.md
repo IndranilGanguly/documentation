@@ -1,7 +1,5 @@
 # SERVER RELATED DOCS
 
-
-
 ## 1. Node JS Installation
 
 ### Step 1
@@ -37,7 +35,6 @@ nvm install "version-name"
 ```
 
 "version-name" will be the version number which will be available by running the command in Step 3
-
 
 ## 2. Deploy a React App
 
@@ -121,7 +118,6 @@ Run the following command
 sudo a2enmod rewrite
 ```
 
-
 ### Step 3
 
 Restart apache service
@@ -129,8 +125,6 @@ Restart apache service
 ```bash
 sudo service apache2 restart
 ```
-
-
 
 ## 3. GoDaddy SSL Certificate Configs
 
@@ -141,8 +135,6 @@ From Godaddy SSL, we get three files
 1. certfile.crt
 2. keyfile.key
 3. cert_bundle.crt
-
-
 
 ### Step 1
 
@@ -186,6 +178,3 @@ Edit the server.xml file in tomcat as required
         </SSLHostConfig>
     </Connector>
 ```
-
-
-

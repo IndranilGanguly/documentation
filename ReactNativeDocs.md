@@ -23,3 +23,31 @@ Refer to the following Repository
 Refer to following Docs
 
 [React Native Play Store Publish](https://reactnative.dev/docs/0.71/signed-apk-android)
+
+## Generate .apk file for debug level
+
+Open terminal from VS Code or Open command Prompt and Navigate to your android folder of your React Native Project Structure and run the following command
+
+```bash
+gradlew clean
+```
+
+After the command ran successfully, it will show **BUILD SUCCESSFUL**
+Then run command
+
+```bash
+gradlew assembleRelease
+```
+
+On successful **BUILD** the apk willbe generated in the following folder as **app-release.apk**
+
+```tree
+├── project-name 
+│   ├── android
+│   │   ├──app
+|   |   |   ├──build
+|   |   |   |   ├──outputs
+|   |   |   |   ├   |──apk
+|   |   |   |   ├   |   |─release
+|   |   |   |   ├   |   |   |─app-release.apk
+```

@@ -38,8 +38,8 @@ If app crash occurs while generating excel reports while using ooxml library
 
 Remove the JAR **poi-ooxml-schemas-4.1.2.jar** from the following directory after deployment
 
-```bash
-├── project (ex: if war deployed is project.war)
+```tree
+├── project (ex: if war deployed is project.war)S
 │   ├── WEB-INF
 │   │   ├──lib
 |   |   |   ├──poi-ooxml-schemas-4.1.2.jar

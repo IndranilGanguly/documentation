@@ -41,7 +41,7 @@ Provide the necessarry informations
 
 1. STMP server address (ex: smtp.secureserver.com)
 2. PORT details for SMTP (No SSL: 80, SSL: 465, TLS: 587)
-3. Email Address which you want to use (ex: ```**info@domain.in**```)
+3. Email Address which you want to use (ex: ```info@domain.in```)
 4. Password of the Email Address you want to use
 
 #### Note: SMTP address and PORT will be available in server configuration options of respective professional email provider console page

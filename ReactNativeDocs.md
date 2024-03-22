@@ -61,7 +61,7 @@ android {
     defaultConfig { ... }
     signingConfigs {
         release {
-            <b>`if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+            <b>if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
                 storeFile file(MYAPP_UPLOAD_STORE_FILE)
                 storePassword MYAPP_UPLOAD_STORE_PASSWORD
                 keyAlias MYAPP_UPLOAD_KEY_ALIAS

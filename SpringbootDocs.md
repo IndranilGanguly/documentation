@@ -32,7 +32,41 @@ spring.servlet.multipart.max-file-size=2MB
 spring.servlet.multipart.max-request-size=2MB
 ```
 
-## 4. Excel Exporter Service for ooxml library
+## 4. Adding Custom Error Page in place of Default error page in Tomcat
+
+Make a custom error page as a static html page and save it as customerror.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+    <h1>Something Went Wrong</h1>
+</body>
+</html>
+```
+
+Place this customerror.html file inside /ROOT folder under /webapps folder
+
+Then open web.xml file located inside /conf directory in Tomcat installation directory.
+Place the following configuration in web.xml inside 'web-app' element
+
+```xml
+<web-app>
+    ... other lines
+    <error-page>
+        <location>/customerror.html</location> <!-- specify the location of your custom error page -->
+    </error-page>
+</web-app>
+```
+
+Restart Tomcat after making the changes
+
+## 5. Excel Exporter Service for ooxml library
 
 If app crash occurs while generating excel reports while using ooxml library
 

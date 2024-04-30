@@ -210,7 +210,8 @@ public class CustomOkHttpClient {
             certificates.add(getCertificate(context, R.raw.certificate_server));
 
             /*R.raw.certificate_root, R.raw.certificate_intermediate, R.raw.certificate_server
-            are the certificate files certificate_root.pem,certificate_intermediate.pem and certificate_server.pem present inside raw directory*/
+            are the certificate files certificate_root.pem,certificate_intermediate.pem and certificate_server.pem present 
+            inside raw directory*/
 
             // Pin certificates
             CertificatePinner.Builder certificatePinnerBuilder = new CertificatePinner.Builder();

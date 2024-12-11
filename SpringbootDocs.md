@@ -70,11 +70,12 @@ Restart Tomcat after making the changes
 
 If app crash occurs while generating excel reports while using ooxml library
 
-Remove the JAR **poi-ooxml-schemas-4.1.2.jar** from the following directory after deployment
+Remove the JAR **poi-ooxml-schemas-4.1.2.jar** and **ooxml-schemas-1.1.jar** from the following directory after deployment
 
 ```tree
 ├── project (ex: if war deployed is project.war)S
 │   ├── WEB-INF
 │   │   ├──lib
 |   |   |   ├──poi-ooxml-schemas-4.1.2.jar
+|   |   |   |--ooxml-schemas-1.1.jar
 ```

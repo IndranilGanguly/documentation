@@ -39,7 +39,7 @@ keytool -genkeypair -v -storetype PKCS12 -keystore "my-upload-key.keystore" -ali
 
 This will save the keystore as ```my-upload-key.keystore``` in the bin folder
 
-Copy the keystore file to your React Native ```android/app``` directory
+    Copy the keystore file to your React Native ```android/app``` directory
 
 Edit the ```android/gradle.properties``` and add the following
 

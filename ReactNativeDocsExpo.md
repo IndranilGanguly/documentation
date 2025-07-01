@@ -173,10 +173,18 @@ gradlew clean
 ```
 
 ```cmd
-gradlew assembleRelease
+gradlew assembleRelease // for generating apk
 ```
 
 the release apk _app-release.apk_ will be generated in the following folder
 
 _android/app/build/outputs/apk/release_
+
+```cmd
+gradlew bundleRelease // for generating aab bundle
+```
+
+the release bundle _app-release.aab_ will be generated in the following folder
+
+_android/app/build/outputs/bundle/release_
 

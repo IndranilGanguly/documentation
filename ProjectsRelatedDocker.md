@@ -47,7 +47,9 @@ Here each of the web apps are running on three different ports locally
 That is
 
 http://localhost:8081 // for app1
+
 http://localhost:8082 // for app2
+
 http://localhost:8083 // for app3
 
 

@@ -114,11 +114,8 @@ or
 docker rmi image-id
 ```
 
-If any bash file is created that needs to be included in docker image and if the bash file is created in windows
-then the image will be created but the execution will not work
-
-It most likely has CRLF (\r\n) line endings, 
-which break shell execution on Linux and cause this classic Docker error
+#### If any bash file is created that needs to be included in docker image and if the bash file is created in windows then the image will be created but the execution will not work
+#### It most likely has CRLF (\r\n) line endings, which break shell execution on Linux and cause this classic Docker error
 
 It is needed to change to LF endings
 
